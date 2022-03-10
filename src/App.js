@@ -1,12 +1,15 @@
-import "./App.css";
-import Timer from "./Components/Pomodoro/Timer";
+import styles from "./App.module.css";
+import Pomodoro from "./Components/Pomodoro/Pomodoro";
+import Header from "./Components/Layout/Header";
 import React from "react";
 
 function App() {
   return (
     <React.Fragment>
-      <div>Lomodoro</div>
-      <Timer timeMinutes={45} />
+      <Header />
+      <div className={styles.pomodoro}>
+        <Pomodoro workMinutes={45} breakMinutes={15} />
+      </div>
     </React.Fragment>
   );
 }

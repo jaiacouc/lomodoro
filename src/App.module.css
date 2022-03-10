@@ -1,0 +1,9 @@
+.App {
+  color: white;
+}
+
+.pomodoro {
+  display: grid;
+  justify-content: center;
+  padding-top: 150px;
+}
