@@ -51,7 +51,7 @@ function Timer(props) {
   });
 
   // Handles onClick event to restart the timer.
-  const startHandler = () => {
+  const clickHandler = () => {
     restTimer();
     props.onFlag(props.flag + 1);
   };
@@ -63,9 +63,10 @@ function Timer(props) {
         {time.seconds > 9 ? time.seconds : "0" + time.seconds}
       </label>
       <div className={styles.center}>
-        <button className={styles.button} onClick={startHandler}>
+        <button className={styles.button} onClick={clickHandler}>
           Start
         </button>
+        <button className={styles.button}>Stop</button>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Header.module.css";
 import alarm from "../../Assets/alarm.svg";
 
+// Header component for the top of the page
 const Header = (props) => {
   return (
     <React.Fragment>
