@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Timer.module.css";
 
-// TODO: Add Stop Button
+// TODO: return back the total time = 0 and a variable saying if start was clicked
 
 function Timer(props) {
   // Set timer amount
@@ -53,6 +53,7 @@ function Timer(props) {
   // Handles onClick event to restart the timer.
   const startHandler = () => {
     restTimer();
+    props.onFlag(props.flag + 1);
   };
 
   return (
