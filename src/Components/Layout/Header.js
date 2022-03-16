@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Header.module.css";
 import alarm from "../../Assets/alarm.svg";
+import Settings from "../Settings/Settings";
 
 // Header component for the top of the page
 const Header = (props) => {
@@ -11,9 +12,7 @@ const Header = (props) => {
           <img src={alarm} alt="Alarm"></img>
         </div>
         <h1>Lomodoro</h1>
-        <div className={styles.btnContainer}>
-          <button className={styles.btn}>Settings</button>
-        </div>
+        <Settings />
       </header>
     </React.Fragment>
   );
