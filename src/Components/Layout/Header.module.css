@@ -22,3 +22,23 @@
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
     brightness(102%) contrast(102%);
 }
+
+.btnContainer{
+  transform: translateY(30px) translateX(600px);
+}
+
+.btn{
+  font-size: 15px;
+  width: 80px;
+  height: 30px;
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 10px;
+
+}
+
+.btn:hover{
+  background-color: rgba(94, 91, 91, 0.747);
+  cursor: pointer;
+}
