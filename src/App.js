@@ -2,17 +2,16 @@ import styles from "./App.module.css";
 import Pomodoro from "./Components/Pomodoro/Pomodoro";
 import Header from "./Components/Layout/Header";
 import React from "react";
-import SettingsForum from "./Components/Settings/SettingsForum";
-import Modal from "./Components/UI/Modal";
+import MinContext from "./Store/min-context";
 
 function App() {
   return (
-    <React.Fragment>
+    <MinContext.Provider value={{ pomodoroMin: 45, breakMin: 15, flag: 0 }}>
       <Header />
       <div className={styles.pomodoro}>
-        <Pomodoro workMinutes={45} breakMinutes={15} />
+        <Pomodoro />
       </div>
-    </React.Fragment>
+    </MinContext.Provider>
   );
 }
 

@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import MinContext from "../../Store/min-context";
 import styles from "./Timer.module.css";
 
 // TODO: return back the total time = 0 and a variable saying if start was clicked
 
 function Timer(props) {
+  // access context variables
+  const ctx = useContext(MinContext);
+
   // Set timer amount
   const setTimer = (min) => {
     // Current Time
@@ -37,10 +41,15 @@ function Timer(props) {
   // Remaining Time state
   const [time, setTime] = useState(remainingTime());
 
-  // Reset Timer
+  // Reset Timer based on current flag
   const restTimer = () => {
-    setTimeAmount(setTimer(props.timeMinutes));
-    setTime(remainingTime());
+    if (ctx.flag === 0) {
+      setTimeAmount(setTimer(Number(ctx.pomodoroMin)));
+      setTime(remainingTime());
+    } else if (ctx.flag === 1) {
+      setTimeAmount(setTimer(Number(ctx.breakMin)));
+      setTime(remainingTime());
+    }
   };
 
   // Updating remaining time every second until time is no longer changing
@@ -51,9 +60,15 @@ function Timer(props) {
   });
 
   // Handles onClick event to restart the timer.
+  // Sets flag for pomodoro/break selector
   const clickHandler = () => {
+    props.onFlag(ctx.flag);
     restTimer();
-    props.onFlag(props.flag + 1);
+    if (ctx.flag === 0) {
+      ctx.flag = 1;
+    } else {
+      ctx.flag = 0;
+    }
   };
 
   return (

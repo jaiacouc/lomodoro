@@ -10,14 +10,14 @@ const SelectPomodoro = (props) => {
   // Manages highlighting of buttons to indicate wheather the user is working or on break
   // Leveraging dynamic css styling
   useEffect(() => {
-    if (props.turn % 2 != 0) {
+    if (props.flag === 0) {
       setWork("active");
       setBrk("");
     } else {
       setBrk("active");
       setWork("");
     }
-  }, [props.turn]);
+  }, [props.flag]);
 
   return (
     <div className={styles.body}>

@@ -11,9 +11,9 @@ const Header = (props) => {
         <div className={styles["main-image"]}>
           <img src={alarm} alt="Alarm"></img>
         </div>
-        <h1>Lomodoro</h1>
-        <Settings />
+        <h1 className={styles.title}>Lomodoro</h1>
       </header>
+      <Settings />
     </React.Fragment>
   );
 };

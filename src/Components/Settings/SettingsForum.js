@@ -1,33 +1,49 @@
-import React from "react";
-import Modal from "../UI/Modal";
+import React, { useContext } from "react";
+import MinContext from "../../Store/min-context";
 
 const SettingsForum = (props) => {
+  const ctx = useContext(MinContext);
+
+  // Handles the change of the pomodoro minutes field
+  // Sets the new minutes to the app wide state through context
+  const handlePomoChange = (e) => {
+    ctx.pomodoroMin = e.target.value;
+    ctx.flag = 0;
+  };
+
+  // Handles the change of break minutes
+  // sets the new break minutes state
+  const handleBreakChange = (e) => {
+    ctx.breakMin = e.target.value;
+  };
+
   return (
-    <Modal>
-      <form>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
-            Email address
-          </label>
-          <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="name@example.com"
-          ></input>
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">
-            Example textarea
-          </label>
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-          ></textarea>
-        </div>
-      </form>
-    </Modal>
+    <React.Fragment>
+      <div class="mb-3">
+        <label for="pomodoro" class="form-label">
+          Pomodoro
+        </label>
+        <input
+          type="number"
+          class="form-control"
+          id="pomodoro"
+          placeholder={ctx.pomodoroMin}
+          onChange={handlePomoChange}
+        ></input>
+      </div>
+      <div class="mb-3">
+        <label for="break" class="form-label">
+          Break
+        </label>
+        <input
+          type="number"
+          class="form-control"
+          id="break"
+          placeholder={ctx.breakMin}
+          onChange={handleBreakChange}
+        ></input>
+      </div>
+    </React.Fragment>
   );
 };
 

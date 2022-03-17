@@ -1,0 +1,21 @@
+.modal-dialog {
+  top: 25%;
+}
+
+.modal-content {
+  background-color: #333841;
+  color: white;
+}
+
+.title {
+  color: white;
+}
+
+.btn-primary {
+  background-color: #12bfc5;
+  border-color: #12bfc5;
+}
+.btn-primary:hover {
+  background-color: #138b8f;
+  border-color: #138b8f;
+}
