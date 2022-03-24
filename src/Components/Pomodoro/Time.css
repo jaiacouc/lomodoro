@@ -1,0 +1,17 @@
+.stop,
+.stop {
+  width: 100%;
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #12bfc5;
+  color: #333841;
+  background: #12bfc5;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0.5rem;
+}
+
+.btn:hover {
+  background-color: #12bfc5d2;
+}

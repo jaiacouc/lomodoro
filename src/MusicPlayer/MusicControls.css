@@ -1,22 +1,31 @@
 .audio-controls {
-  display: flex;
-  justify-content: space-between;
-  width: 75%;
-  margin: 0 auto 15px;
+  position: fixed;
+  padding-top: 20px;
+  transform: translateX(140%);
+  justify-content: center;
 }
 
-.audio-controls .prev svg,
-.audio-controls .next svg {
-  width: 35px;
-  height: 35px;
+.btn {
+  width: 50px;
+  background-color: transparent;
+  border-color: transparent;
 }
 
-.audio-controls .play svg,
-.audio-controls .pause svg {
-  height: 40px;
-  width: 40px;
+.bi {
+  font-size: 30px;
+}
+.bi:hover {
+  font-size: 35px;
+}
+.ml-1 {
+  margin-left: 40px;
 }
 
-.audio-controls path {
-  fill: var(--white);
+.btn:focus,
+.btn:hover,
+.btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent;
+  border-color: transparent;
 }

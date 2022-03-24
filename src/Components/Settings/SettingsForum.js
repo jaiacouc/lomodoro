@@ -8,7 +8,6 @@ const SettingsForum = (props) => {
   // Sets the new minutes to the app wide state through context
   const handlePomoChange = (e) => {
     ctx.pomodoroMin = e.target.value;
-    ctx.flag = 0;
   };
 
   // Handles the change of break minutes

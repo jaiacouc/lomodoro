@@ -1,36 +1,28 @@
 import React from "react";
-import Play from "../../Assets/play-circle-fill.svg";
-import Pause from "../../Assets/pause-btn-fill.svg";
-import Next from "../../Assets/skip-end-fill.svg";
-import Prev from "../../Assets/skip-start-fill.svg";
-import "MusicControls.css";
+import "./MusicControls.css";
 
-const MusicControls = ({ isPlaying, onPlayPause, onPrev, onNext }) => {
+const MusicControls = (props) => {
+  // Music controls for the music player.
+  // The play pause button decides image based on isPlaying state
+  // Click events are passed back to the MusicPlayer
   return (
     <div className="audio-controls">
-      <button className="pause" type="button" onClick={onPrev}>
-        <Prev />
+      <button class="btn btn-primary" type="button" onClick={props.onPrev}>
+        <i class="bi bi-skip-start-fill"></i>
       </button>
-      {isPlaying ? (
-        <button
-          className="pause"
-          type="button"
-          onClick={() => onPlayPause(false)}
-        >
-          <Pause />
-        </button>
-      ) : (
-        <button
-          className="play"
-          type="button"
-          onclick={() => onPlayPause(true)}
-        >
-          <Play />
-        </button>
-      )}
-      ;
-      <button className="next" type="button" onClick={onNext}>
-        <Next />
+      <button
+        class="btn btn-primary ml-1"
+        type="button"
+        onClick={() => props.setIsPlaying(!props.isPlaying)}
+      >
+        {props.isPlaying ? (
+          <i class="bi bi-pause-circle-fill"></i>
+        ) : (
+          <i class="bi bi-play-fill"></i>
+        )}
+      </button>
+      <button class="btn btn-primary ml-1" type="button" onClick={props.onNext}>
+        <i class="bi bi-skip-end-fill"></i>
       </button>
     </div>
   );

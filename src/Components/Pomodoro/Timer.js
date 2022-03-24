@@ -2,9 +2,10 @@ import React, { useEffect, useState, useContext } from "react";
 import MinContext from "../../Store/min-context";
 import styles from "./Timer.module.css";
 
-// TODO: return back the total time = 0 and a variable saying if start was clicked
-
 function Timer(props) {
+  // Starting flag
+  const [start, setStart] = useState(true);
+
   // access context variables
   const ctx = useContext(MinContext);
 
@@ -41,14 +42,27 @@ function Timer(props) {
   // Remaining Time state
   const [time, setTime] = useState(remainingTime());
 
-  // Reset Timer based on current flag
-  const restTimer = () => {
+  // Resets Timer to the next state (pomodoro/break)
+  const nextTimer = () => {
     if (ctx.flag === 0) {
       setTimeAmount(setTimer(Number(ctx.pomodoroMin)));
       setTime(remainingTime());
     } else if (ctx.flag === 1) {
       setTimeAmount(setTimer(Number(ctx.breakMin)));
       setTime(remainingTime());
+    }
+  };
+
+  // Resets the timer
+  const resetTimer = () => {
+    if (!start) {
+      if (ctx.flag === 1) {
+        setTimeAmount(setTimer(Number(ctx.pomodoroMin)));
+        setTime(remainingTime());
+      } else if (ctx.flag === 0) {
+        setTimeAmount(setTimer(Number(ctx.breakMin)));
+        setTime(remainingTime());
+      }
     }
   };
 
@@ -59,11 +73,19 @@ function Timer(props) {
     }, 1000);
   });
 
+  // Checks for when time is updated via settings
+  useEffect(() => {
+    if (!start) {
+      resetTimer();
+    }
+  }, [ctx.pomodoroMin, ctx.breakMin]);
+
   // Handles onClick event to restart the timer.
   // Sets flag for pomodoro/break selector
   const clickHandler = () => {
+    setStart(false);
     props.onFlag(ctx.flag);
-    restTimer();
+    nextTimer();
     if (ctx.flag === 0) {
       ctx.flag = 1;
     } else {
@@ -79,9 +101,11 @@ function Timer(props) {
       </label>
       <div className={styles.center}>
         <button className={styles.button} onClick={clickHandler}>
-          Start
+          {start ? "Start" : "Next"}
         </button>
-        <button className={styles.button}>Stop</button>
+        <button className={styles.button} onClick={resetTimer}>
+          Stop
+        </button>
       </div>
     </div>
   );
