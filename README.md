@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Lomodoro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This is a web app that plays lofi music with a pomodoro timer and todo list.
+> Live link [_here_](https://lomodoro-542e9.web.app/)
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [General Info](#general-information)
+- [Technology and Framworks](#technologies-and-frameworks)
+- [Usage](#usage)
+- [Project Status](#project-status)
+- [Improvements](#improvements)
+- [Acknowledgements](#acknowledgments)
 
-### `npm start`
+## General Information
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- This app allows users to use a pomodoro timer with the option to play lofi music and manage tasks with a todo list.
+- This web app is hosted in google firebase.
+- This app connects to a api I created [_here_](https://github.com/jaiacouc/LoFiApi) to play the lofi music, the app was created with Reactjs using react hooks throughout. It uses bootstrap components for some components of the app and other parts are regular HTML/CSS.
+- I created this app because I found myself listening to tons of lofi music and also using a pomodoro timer when working on school work or coding. I decided to code my own web app for more practice with React.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies and FrameWorks
 
-### `npm test`
+This project was made with:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Reactjs
+- Bootstrap
+- React Hooks
+- FireBase
+- HTML
+- CSS
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- This app is avalible to the public for use
+- Feel free to use this project as a example for your and any suggestions would be great!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Status
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Project is: _Live_
+- In Progress: _Yes_
 
-### `npm run eject`
+## Improvements
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Possible features to add:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Login for storing tasks
+- Music scrubing/progress bar
+- Volume adjustment bar
+- Alternative styles
+- Favorites for songs
+- Sounds/alert for when timer ends.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Acknowledgments
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Music sourced from: https://pixabay.com
