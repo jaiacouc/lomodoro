@@ -23,6 +23,7 @@
 
 This project was made with:
 
+- Javascript
 - Reactjs
 - Bootstrap
 - React Hooks
