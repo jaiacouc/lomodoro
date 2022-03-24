@@ -1,7 +1,7 @@
 # Lomodoro
 
 > This is a web app that plays lofi music with a pomodoro timer and todo list.
-> Live link [_here_](https://lomodoro-542e9.web.app/)
+> Live link [_here_](https://lomodoro.com/)
 
 ## Table of Contents
 
