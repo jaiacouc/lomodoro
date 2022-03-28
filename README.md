@@ -34,7 +34,7 @@ This project was made with:
 ## Usage
 
 - This app is avalible to the public for use
-- Feel free to use this project as a example for your and any suggestions would be great!
+- Feel free to use this project as a example for yours and any suggestions would be great!
 
 ## Project Status
 
